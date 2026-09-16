@@ -43,7 +43,9 @@ PyMuPDF 的 sdist 不包含 MuPDF 本体。本次另取 MuPDF 完整官方源码
 
 **不能用 `cv2.ipp.setUseIPP(False)` 解决分发问题**：关闭运行时加速不会移除已链接的二进制。直接换 `opencv-python-headless` 也不等于关闭 IPP，仍须检查实际构建。
 
-## 建议的下一步（新增构建范围，待确认）
+## 无 IPP 云端构建（已确认）
+
+用户已回复“好的”，确认新增该构建范围；实现入口和验收边界见 [云端构建设计](opencv-cloud-build.md)。云端候选通过前，现有二进制发布阻断仍保留。
 
 推荐保持 OCR、PDF、公式的业务接口和模型不变，**从锁定源码构建不含 IPP 的 OpenCV wheel**，再重建核心运行时并验证。可以在 GitHub Actions Windows runner 上构建，避免向已接近满盘的本机安装大型 MSVC 工具链。需要新增 CI 配置、第三方 wheel 构建/存档及其验收；原计划仅重打包现有运行时，未包含这项。
 
