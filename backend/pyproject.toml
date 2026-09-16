@@ -4,6 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shiye"
+license = "MIT"
 version = "0.2.0"
 description = "识页 · 本地 OCR 与文档转换工作台"
 requires-python = ">=3.12,<3.14"

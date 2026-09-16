@@ -3,6 +3,7 @@
   "productName": "识页",
   "version": "0.3.0",
   "private": true,
+  "license": "MIT",
   "description": "识页 · 本地 OCR、公式校对与文档转换",
   "author": "AIAADC",
   "main": "main.cjs",

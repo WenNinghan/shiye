@@ -2,6 +2,8 @@
 
 维护者：[WenNinghan](https://github.com/WenNinghan)。
 
+许可证：作者已选择 **[MIT](../LICENSE)** 用于项目自有源码及随附文档；第三方组件和模型继续遵循各自许可证。
+
 | 入口 / 产物 | 状态 |
 | --- | --- |
 | [个人源码仓库](https://github.com/WenNinghan/shiye) | 主维护入口，包含前后端、桌面源码、构建脚本和说明 |

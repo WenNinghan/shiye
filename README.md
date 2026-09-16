@@ -255,7 +255,9 @@ Pop-Location
 
 ## 依赖与发布许可
 
-识页复用了 [RapidOCR](https://github.com/RapidAI/RapidOCR) 和 [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) 的本地识别能力。PyMuPDF / MuPDF 使用 **AGPL 与商业许可双授权**，详见 [官方许可说明](https://pymupdf.readthedocs.io/en/latest/about.html#license-and-copyright)。项目源码尚未由作者选定整体发布许可证；这里没有擅自标成 MIT。准备公开发布或作为闭源服务使用时，请先确认各依赖、模型权重和部署方式的许可兼容性。
+识页自有源码及随附文档采用 **[MIT License](LICENSE)**，版权署名为 **Copyright (c) 2026 WenNinghan**。按许可证条件保留版权与许可声明，即可使用、复制、修改和分发这些自有内容。
+
+MIT 不改变第三方依赖、模型权重、字体和其他上游素材的许可证。识页复用了 [RapidOCR](https://github.com/RapidAI/RapidOCR) 和 [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)；其中 PyMuPDF / MuPDF 使用 **AGPL 与商业许可双授权**，详见 [官方许可说明](https://pymupdf.readthedocs.io/en/latest/about.html#license-and-copyright)。本项目选用 MIT 不表示包含这些组件的完整安装包或服务也可仅按 MIT 分发；打包、部署与再分发仍需履行适用的第三方许可义务。
 
 ## 想一起把它做好？
 
