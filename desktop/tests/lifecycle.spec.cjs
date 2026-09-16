@@ -14,6 +14,12 @@ test('frozen engine + desktop: local OCR, settings, privacy and clean exit', asy
     page.on('pageerror', error => errors.push(error.message));
     await expect(page.getByRole('button', { name: '选择文件', exact: true })).toBeEnabled({ timeout: 60000 });
     origin = new URL(page.url()).origin;
+    await page.getByRole('button', { name: '使用指南', exact: true }).click();
+    await page.getByText('开源许可与源码（离线可读）', { exact: true }).click();
+    const licenseFrame = page.frameLocator('iframe[title="开源许可正文"]');
+    await expect(licenseFrame.getByRole('heading', { name: '开源许可与源码 · 0.3.1' })).toBeVisible();
+    await expect(licenseFrame.locator('body')).toContainText('GNU AFFERO GENERAL PUBLIC LICENSE');
+    await page.getByRole('button', { name: '关闭使用指引' }).click();
     await page.getByRole('button', { name: '识别设置', exact: true }).click();
     await expect(page.getByRole('heading', { name: '选择适合你的识别方式' })).toBeVisible();
     await page.getByLabel('完整 API 地址').fill('https://api.example.com/v1/chat/completions');

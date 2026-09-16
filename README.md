@@ -12,22 +12,22 @@
 
 **[完整源码](https://github.com/WenNinghan/shiye) · [AIAADC 项目入口](https://github.com/AIAADC/student-projects/tree/main/projects/shiye-WenNinghan) · [反馈问题](https://github.com/WenNinghan/shiye/issues) · [发布状态](docs/release-status.md)**
 
-当前为 **v0.3 桌面功能预览 / 源码发布版**：源码可按下方步骤在本机运行；Windows 安装版已完成本机内测，但安装包、模型权重暂不公开分发。**没有公网在线体验地址，也没有安卓/iPhone 安装包**；文中的 `127.0.0.1` 是你自己电脑的地址，不是作者提供的在线服务。
+当前为 **v0.3.1 Windows x64 离线预发布版**：[下载 Release](https://github.com/WenNinghan/shiye/releases/tag/v0.3.1)。下载安装器和公式包后，不依赖作者电脑，不需要自己安装 Python / Node，也不需要 API 密钥。**没有公网在线体验地址，也没有安卓/iPhone 安装包**；文中的 `127.0.0.1` 是你自己电脑的地址。
 
 ## 从这里开始
 
-- 想先体验：看下方「先跑起来：Windows」，使用内置合成样例。
+- 想直接使用：从 [Release](https://github.com/WenNinghan/shiye/releases/tag/v0.3.1) 下载 `Shiye-0.3.1-Windows-x64.exe`；需要公式再下载 `.shiye-model`，在“识别设置”导入。其余 Sources / Dependencies / Notices 是源码与声明，普通用户不必全部下载。
 - 主要看论文、课本：[公式识别与可视化校对](docs/formula-guide.md)。
 - 想了解桌面版 / 自己接 API：[桌面使用说明](docs/desktop-guide.md)。
 - 想参与：[贡献指南](CONTRIBUTING.md)；想了解实际效果：[测试与限制](docs/desktop-acceptance.md)。
 - 想了解许可与公开范围：[第三方来源与发布边界](THIRD_PARTY_NOTICES.md)。
-- 想了解安装包为什么还未提供：[分发核对进展与 OpenCV/IPP 构建阻断](docs/distribution-licensing.md)。自有源码 MIT 已确定，公开二进制仍需完成依赖处理。
+- 想修改或再分发：[许可范围](docs/release-license-scope.md)与[对应源码 / 重建说明](docs/rebuild-0.3.1.md)。自有代码 MIT；含 PyMuPDF 的核心组合依适用 AGPL 条件分发，第三方不改授为 MIT。
 
-## Windows 桌面测试版 v0.3
+## Windows 桌面测试版 v0.3.1
 
 已新增独立桌面程序：默认本地识别，可导入公式离线包，也可自愿配置支持图片输入的 API。延用现有校对、数学公式显示和六格式导出。安装版用户无需自行配置 Python / Node。
 
-先看 [桌面版使用说明](docs/desktop-guide.md) 和 [实际验收与限制](docs/desktop-acceptance.md)。安装版为未签名内测产物；真实第三方 API、干净 Windows 兼容性及再分发许可仍需补验。本仓库提供桌面源代码和构建脚本，**不是下载后双击源码就有桌面安装版**。下方启动方式运行的是同一校对工作台的本机浏览器版；API 设置目前只在桌面壳中启用。
+先看 [桌面版使用说明](docs/desktop-guide.md) 和 [实际验收与限制](docs/desktop-acceptance.md)。本版为**未签名 Pre-release**，不要求关闭系统防护；已做同机冻结程序与模型测试，尚未在另一台干净 Windows 上验证，也未验证所有真实 API 服务商。请核对来源及 `SHA256SUMS.txt`。源码位于 Code 页，安装器位于 Release；下方启动方式面向开发者，运行本机浏览器工作台。
 
 ### 公式不只是代码：看得懂，也改得动
 

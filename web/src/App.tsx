@@ -158,6 +158,7 @@ export default function App() {
   const [tasks, setTasks] = useState<Task[]>([]),
     [reference, setReference] = useState(today),
     [showHelp, setShowHelp] = useState(false),
+    [licenseHtml, setLicenseHtml] = useState(""),
     [dragging, setDragging] = useState(false);
   const [formulaStatus, setFormulaStatus] = useState<FormulaStatus | null>(null);
   const [showSettings, setShowSettings] = useState(false);
@@ -738,7 +739,7 @@ export default function App() {
             <ChevronRight size={14} />
           </button>
           <div className="sidebar-footer">
-            AIAADC · 学生项目<span>v0.2</span>
+            AIAADC · 学生项目<span>v0.3.1</span>
           </div>
         </div>
       </aside>
@@ -2221,6 +2222,22 @@ export default function App() {
               当前主要支持清晰印刷中文、英文、原生 PDF、简单有线表格和印刷数学公式。
               手写、模糊长公式、合并单元格、多栏版面和特殊字体仍可能识别不准；模型结果不是论文定稿，重要内容务必对照原图核对。
             </p>
+            <details className="help-note" style={{ display: "block" }} onToggle={async (event) => {
+              if (event.currentTarget.open && !licenseHtml) {
+                try {
+                  const response = await fetch("/licenses/index.html");
+                  if (!response.ok) throw new Error("License page unavailable");
+                  setLicenseHtml(await response.text());
+                } catch {
+                  setLicenseHtml("<p>许可正文暂未载入，请关闭使用指南后重试，或查看安装目录/Release 的 Notices 材料。</p>");
+                }
+              }
+            }}>
+              <summary style={{ cursor: "pointer" }}>开源许可与源码（离线可读）</summary>
+              <p className="muted">识页自有代码采用 MIT；包含 PyMuPDF 的核心组合遵循适用 AGPL 条件，第三方组件保留各自许可。</p>
+              <iframe title="开源许可正文" srcDoc={licenseHtml} sandbox=""
+                style={{ width: "100%", height: 350, border: "1px solid #ccd9c8", borderRadius: 8 }} />
+            </details>
             <button className="primary full" onClick={() => setShowHelp(false)}>
               知道了，开始使用 <ArrowRight size={16} />
             </button>
