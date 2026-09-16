@@ -49,3 +49,21 @@
 ## 首轮执行记录
 
 已触发 run `35078797797`。本地与云端的 10 项工具单测通过。公式 job 在加载 setuptools 59.2.0 的构建后端时失败（`Cannot import setuptools.build_meta`），尚未编译；核心使用 setuptools 69.5.1 已进入构建。修正公式构建工具为 69.5.1，通过 `--no-build-isolation` 使用明确记录的构建环境；不修改上游算法源码。新增单环境重试选项，仅重跑失败的公式 job，不取消正在进行的核心编译。
+
+公式定向重试为 run `35079017321`，已经进入构建步骤。原 run 仍有失败的历史公式 job，不能把原 run 的整体红色状态直接当作核心 job 的结论；分别查看：
+
+- [核心 job](https://github.com/WenNinghan/shiye/actions/runs/35078797797/job/104737515359)
+- [修正后的公式 run](https://github.com/WenNinghan/shiye/actions/runs/35079017321)
+
+### G3 分阶段状态
+
+| 项目 | 验证 / 实际结果 |
+| --- | --- |
+| 工具单测 | 本地执行 `python -m unittest discover -s packaging/tests -v`，10/10 通过；首轮两套 runner 的同一步骤均通过 |
+| 工作流接入 | GitHub 已接受并启动手动触发，使用标准 Windows runner；仓库只读权限、未配置 secrets、无 Release 写入步骤 |
+| 核心/公式源码编译 | 更新记录时两者均为 in_progress；这不是编译成功或产物验收通过 |
+| 最终应用 | 未换本机 wheel，未重新冻结，未跑新版桌面完整测试；下一阶段必须继续 |
+
+在 Actions 页面选择 `Run workflow`，`variant=both` 可构建两套；`core` 或 `formula` 用于有明确修正后的单环境重试。下载成功 job 的 `opencv-*-no-ipp-windows-x64` 工件：wheel、原始源码、编译参数、CMake 缓存、环境、日志及验证报告一并保留。失败工件后缀为 `-failure`，只含诊断资料，不是安装包。
+
+工件到期会删除，最终公开分发前仍需把适用源码与材料移到永久 Release，并核对所有第三方条款。构建候选不自动等于整个产品分发通过。
