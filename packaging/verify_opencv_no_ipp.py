@@ -59,6 +59,8 @@ def main():
     info = cv2.getBuildInformation()
     (root/'opencv-build-info.txt').write_text(info, encoding='utf-8')
     verify_build_info(info)
+    if recipe['variant'] == 'core' and not re.search(r'^\s*DNN MLAS:\s*NO\b', info, re.M):
+        raise ValueError('Core build must report the non-MLAS DNN fallback')
     if cv2.ipp.useIPP():
         raise ValueError('IPP runtime is enabled')
     name, version = recipe['source']['name'], recipe['source']['version']

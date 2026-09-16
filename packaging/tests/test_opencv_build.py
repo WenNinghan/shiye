@@ -16,6 +16,34 @@ verify = load('verify_opencv_no_ipp')
 
 
 class OpenCVBuildTests(unittest.TestCase):
+    def test_no_ffmpeg_patch_both_locked_patterns(self):
+        for digits in (3, 4):
+            with self.subTest(digits=digits), tempfile.TemporaryDirectory() as folder:
+                root = Path(folder)
+                setup = root/'setup.py'
+                entry = r'[r"bin/opencv_videoio_ffmpeg\d{' + str(digits) + r'}%s\.dll" % ("_64" if is64 else "")]'
+                setup.write_text('files = (\n    '+entry+'\n    if os.name == "nt"\n    else []\n)\nkeep = 123\n', encoding='utf-8')
+                record = build.patch_ffmpeg_packaging(setup, root)
+                self.assertIn('keep = 123', setup.read_text())
+                self.assertNotIn('opencv_videoio_ffmpeg', setup.read_text())
+                self.assertTrue((root/record['patch']).is_file())
+                self.assertNotEqual(record['before_sha256'], record['after_sha256'])
+
+    def test_patch_rejects_unknown_or_already_patched_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            setup = root/'setup.py'
+            setup.write_text('files = []\n', encoding='utf-8')
+            with self.assertRaises(ValueError):
+                build.patch_ffmpeg_packaging(setup, root)
+            self.assertEqual(setup.read_text(), 'files = []\n')
+
+    def test_core_uses_existing_sgemm_fallback_only(self):
+        flag = '-DCMAKE_ASM_COMPILER:FILEPATH=NOTFOUND'
+        self.assertIn(flag, build.build_flags('core'))
+        self.assertNotIn(flag, build.build_flags('formula'))
+        self.assertNotIn('-DBUILD_opencv_dnn=OFF', build.build_flags('core'))
+
     def test_exact_sources(self):
         for variant in build.PACKAGES:
             entry = build.source_record(variant)

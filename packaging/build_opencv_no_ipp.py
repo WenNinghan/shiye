@@ -4,6 +4,7 @@ No application environments are changed by this script. Installing build tools
 and the resulting wheel is the workflow's explicit responsibility.
 """
 import argparse
+import difflib
 import hashlib
 import json
 import os
@@ -20,6 +21,33 @@ PACKAGES = {'core': ('opencv-python', '5.0.0.93'),
 FLAGS = ['-DWITH_IPP:BOOL=OFF', '-DWITH_IPP_IW:BOOL=OFF', '-DWITH_FFMPEG:BOOL=OFF',
          '-DWITH_OBSENSOR=OFF', '-DBUILD_TESTS=OFF', '-DBUILD_PERF_TESTS=OFF',
          '-DBUILD_EXAMPLES=OFF', '-DBUILD_JAVA=OFF']
+
+
+def build_flags(variant):
+    # OpenCV 5's vendored MLAS .S objects fail to link with this MSVC recipe.
+    # Its CMakeLists explicitly provides the built-in DNN SGEMM fallback when
+    # generic ASM is unavailable. Keep DNN, and do not affect ASM_NASM codecs.
+    return FLAGS + (['-DCMAKE_ASM_COMPILER:FILEPATH=NOTFOUND'] if variant == 'core' else [])
+
+
+def patch_ffmpeg_packaging(setup_path, output):
+    """Remove only the locked upstream wheel's mandatory FFmpeg file entry."""
+    before = setup_path.read_text(encoding='utf-8')
+    candidates = [r'[r"bin/opencv_videoio_ffmpeg\d{' + str(digits)
+                  + r'}%s\.dll" % ("_64" if is64 else "")]' for digits in (3, 4)]
+    matched = [pattern for pattern in candidates if pattern in before]
+    if len(matched) != 1 or before.count(matched[0]) != 1:
+        raise ValueError('Unknown upstream FFmpeg packaging entry; review source before patching')
+    after = before.replace(matched[0], '[]  # Shiye: WITH_FFMPEG=OFF; no FFmpeg DLL to package', 1)
+    compile(after, 'setup.py', 'exec')  # Validate syntax, never execute upstream setup here.
+    patch_file = output/'setup-no-ffmpeg.patch'
+    patch_file.write_text(''.join(difflib.unified_diff(
+        before.splitlines(keepends=True), after.splitlines(keepends=True),
+        fromfile='a/setup.py', tofile='b/setup.py')), encoding='utf-8')
+    setup_path.write_text(after, encoding='utf-8', newline='\n')
+    return {'file': 'setup.py', 'patch': patch_file.name,
+            'before_sha256': hashlib.sha256(before.encode()).hexdigest(),
+            'after_sha256': sha256(setup_path), 'reason': 'Exclude disabled FFmpeg from wheel file list'}
 
 
 def source_record(variant):
@@ -66,14 +94,16 @@ def main():
     if len(roots) != 1 or not (roots[0]/'setup.py').is_file():
         raise ValueError('Unexpected source layout')
     source_root = roots[0]
-    env = {**os.environ, 'CMAKE_ARGS': ' '.join(FLAGS),
+    patch = patch_ffmpeg_packaging(source_root/'setup.py', output)
+    flags = build_flags(args.variant)
+    env = {**os.environ, 'CMAKE_ARGS': ' '.join(flags),
            'CMAKE_BUILD_PARALLEL_LEVEL': '2', 'ENABLE_CONTRIB': '1' if args.variant == 'formula' else '0'}
     wheels = output/'wheels'
     wheels.mkdir()
     command = [sys.executable, '-m', 'pip', 'wheel', str(source_root), '--no-deps',
                '--no-build-isolation', '--no-cache-dir', '--verbose', '--wheel-dir', str(wheels)]
     evidence = {'variant': args.variant, 'source': {k:record[k] for k in ('name','version','file','url','sha256','bytes')},
-                'cmake_args': FLAGS, 'source_patches': [], 'python': sys.version,
+                'cmake_args': flags, 'source_patches': [patch], 'python': sys.version,
                 'git_commit': os.environ.get('GITHUB_SHA'), 'run_url':
                 f"https://github.com/{os.environ.get('GITHUB_REPOSITORY')}/actions/runs/{os.environ.get('GITHUB_RUN_ID')}"}
     (output/'build-recipe.json').write_text(json.dumps(evidence, indent=2)+'\n', encoding='utf-8')
@@ -100,7 +130,7 @@ def main():
         raise RuntimeError('Expected exactly one output wheel')
     (output/'wheel-sha256.txt').write_text(f'{sha256(found[0])}  {found[0].name}\n', encoding='utf-8')
     (output/'SHIYE-BUILD-NOTICE.txt').write_text(
-        'Shiye custom build of the attached unmodified upstream source archive.\n'
+        'Shiye custom build: original upstream archive plus attached setup-no-ffmpeg.patch.\n'
         'IPP and FFmpeg disabled at compile time; see build-recipe.json.\n'
         'Upstream umbrella license texts can mention components not compiled here.\n'
         'The original source archive, CMake evidence and build environment accompany this wheel.\n'

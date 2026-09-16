@@ -67,3 +67,13 @@
 在 Actions 页面选择 `Run workflow`，`variant=both` 可构建两套；`core` 或 `formula` 用于有明确修正后的单环境重试。下载成功 job 的 `opencv-*-no-ipp-windows-x64` 工件：wheel、原始源码、编译参数、CMake 缓存、环境、日志及验证报告一并保留。失败工件后缀为 `-failure`，只含诊断资料，不是安装包。
 
 工件到期会删除，最终公开分发前仍需把适用源码与材料移到永久 Release，并核对所有第三方条款。构建候选不自动等于整个产品分发通过。
+
+## 构建失败修复设计（截图反馈后）
+
+实查两个 run 已失败，不再沿用上面的运行中快照。核心 job 日志为 `LNK1181 ... SgemmKernelSse2.obj`；公式重试 job 日志为 `Not found: 'bin/opencv_videoio_ffmpeg\\d{4}_64\\.dll'`。前者是 MLAS 汇编链接，后者是在 CMake 安装后由 setup.py 文件分类器强制寻找被禁用的 FFmpeg。
+
+本次属于已确认 CI 的修复：涉及构建脚本、验证脚本、工具测试、工作流工件列表、本文/发布状态与原能力地图；H1/H9 命中，其余 H2–H8（H9 除外）及 H10 未命中，判定中等，不新增服务/运行库，不改应用接口、权限或数据库。已重读能力地图，复用原下载、编译、证据与校验能力，不另建构建体系。
+
+修复方案：核心通过 CMake `CMAKE_ASM_COMPILER=NOTFOUND` 走该锁定版本 MLAS CMakeLists 中已经提供的 DNN 内建 SGEMM 回退；不删除 DNN 模块，不修改识别算法。两套源包仅对 setup.py 的 FFmpeg 额外文件条目作精确、拒绝未知版本的修补，与 WITH_FFMPEG=OFF 一致。保留原归档、统一差异补丁和修补后哈希。不要重新启用 FFmpeg/IPP 来绕过打包失败，也不要忽略失败直接上传 wheel。
+
+验收：工具测试 + 对两份真实源包的修补/语法检查；重新运行两套云端构建；核对实际无 IPP/FFmpeg、核心 MLAS 已回退、图片处理和后端回归。云端结果未出之前只称修复已提交/重跑，不称构建通过。

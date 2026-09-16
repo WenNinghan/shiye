@@ -77,6 +77,7 @@ jobs:
             candidate/*.json
             candidate/*.txt
             candidate/*.xml
+            candidate/*.patch
             candidate/cmake-evidence/
           if-no-files-found: warn
           retention-days: 14
@@ -91,6 +92,7 @@ jobs:
             candidate/*.txt
             candidate/*.log
             candidate/*.xml
+            candidate/*.patch
             candidate/cmake-evidence/
           if-no-files-found: error
           retention-days: 30
