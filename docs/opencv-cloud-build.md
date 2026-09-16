@@ -77,3 +77,10 @@
 修复方案：核心通过 CMake `CMAKE_ASM_COMPILER=NOTFOUND` 走该锁定版本 MLAS CMakeLists 中已经提供的 DNN 内建 SGEMM 回退；不删除 DNN 模块，不修改识别算法。两套源包仅对 setup.py 的 FFmpeg 额外文件条目作精确、拒绝未知版本的修补，与 WITH_FFMPEG=OFF 一致。保留原归档、统一差异补丁和修补后哈希。不要重新启用 FFmpeg/IPP 来绕过打包失败，也不要忽略失败直接上传 wheel。
 
 验收：工具测试 + 对两份真实源包的修补/语法检查；重新运行两套云端构建；核对实际无 IPP/FFmpeg、核心 MLAS 已回退、图片处理和后端回归。云端结果未出之前只称修复已提交/重跑，不称构建通过。
+
+### 本次修复的阶段验收
+
+- `python -m unittest discover -s packaging/tests -v`：13/13 通过。
+- 两份锁定的真实 sdist 再核对 SHA-256/大小后，仅将 setup.py 中强制 FFmpeg 文件列表改为 `[]`；生成的统一差异均为单行修改，语法编译检查通过。未执行上游 setup.py 进行该离线检查。
+- 改动提交 `5aeb0bf86e02691c493cd6342ae2f1eb7856aadd`，已启动[第三次运行 35081772275](https://github.com/WenNinghan/shiye/actions/runs/35081772275)，包含 core/formula 两个 job；结果以该运行页为准。
+- 旧运行仍显示红叉是历史结果，并非新运行状态。未取得新运行成功结果前，不宣称已完成云端验收或安装包发布。
