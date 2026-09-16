@@ -84,3 +84,17 @@
 - 两份锁定的真实 sdist 再核对 SHA-256/大小后，仅将 setup.py 中强制 FFmpeg 文件列表改为 `[]`；生成的统一差异均为单行修改，语法编译检查通过。未执行上游 setup.py 进行该离线检查。
 - 改动提交 `5aeb0bf86e02691c493cd6342ae2f1eb7856aadd`，已启动[第三次运行 35081772275](https://github.com/WenNinghan/shiye/actions/runs/35081772275)，包含 core/formula 两个 job；结果以该运行页为准。
 - 旧运行仍显示红叉是历史结果，并非新运行状态。未取得新运行成功结果前，不宣称已完成云端验收或安装包发布。
+
+## 完整离线路线与测试入口修复
+
+用户选择“完整离线”：继续已有本地文字/公式运行时和文档导出，不改成必须调用 API，不更换 PDF 引擎。本节为已批准构建方案内的定向修复。
+
+`gh run view 35081772275 --json jobs` 已确认公式 job 成功并保存候选；核心源码编译及实际 wheel 校验也成功，失败发生在后端测试收集：`ModuleNotFoundError: No module named 'shiye'`。工作流从仓库根运行 `-o pythonpath=backend`，而 pytest 的配置根是 backend，导致相对路径重复。不是新的编译失败。
+
+G1：本次涉及工作流、本文、发布状态三份逻辑文件（同步原开发副本不新增设计范围）；H9 命中。H1 未命中（3 份），H2/H3/H4/H5 未命中（不改数据库、业务接口、认证或计费），H6/H7/H8 未命中（不改共享业务模块、不加依赖、不改跨端契约），H10 未命中（用户已明确完整离线）。判定中等，沿用已确认 G2。
+
+G2：已核对原能力地图，复用现有 backend/pyproject.toml 的 `pythonpath=["."]` 与 backend/tests。在 backend 目录执行测试，JUnit 输出到上级 candidate；用 finally 恢复工作目录，保留随后真实 OCR 校验。应用界面、服务、数据和权限均不涉及；仅扩展本构建记录。不采用更换 PDF 栈、跳过测试或重复构建成功的公式 job。风险是 CI 环境仍可暴露其他运行问题；失败按实际日志处理，不把本地通过当云端通过。回滚仅恢复此测试调用。
+
+验收：在发布仓库 backend 目录执行同一测试命令，确认 44 项既有用例；执行 13 项材料/构建工具单测；仅触发 core 构建并分别记录云端结果。公式候选下载保存到 G 盘用于后续整合，但候选成功不代表已完成模型推理、冻结程序或整包断网验收。
+
+本地 G3：修正后的 `python -m pytest tests -q --junitxml=...` 在发布仓库 backend 目录运行，44 passed（15.23 秒，2 条上游弃用警告）；`python -m unittest discover -s packaging/tests -v` 为 13/13 通过；`git diff --check` 通过。本机使用现有开发环境，这些结果不替代新 wheel 的云端回归和整包断网测试。

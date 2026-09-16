@@ -63,8 +63,13 @@ jobs:
           if ($LASTEXITCODE) { throw 'Test dependency install failed' }
           python packaging/verify_opencv_no_ipp.py --output candidate
           if ($LASTEXITCODE) { throw 'Dependency install replaced the candidate' }
-          python -m pytest backend/tests -q -o pythonpath=backend --junitxml=candidate/backend-tests.xml
-          if ($LASTEXITCODE) { throw 'Backend regression failed' }
+          Push-Location backend
+          try {
+            python -m pytest tests -q --junitxml=../candidate/backend-tests.xml
+            if ($LASTEXITCODE) { throw 'Backend regression failed' }
+          } finally {
+            Pop-Location
+          }
           python -c "from rapidocr_onnxruntime import RapidOCR; import json; from pathlib import Path; result,_=RapidOCR()('web/public/examples/notice.png'); assert result and len(result)>2; Path('candidate/ocr-smoke.json').write_text(json.dumps({'blocks':len(result),'texts':[r[1] for r in result]},ensure_ascii=False),encoding='utf-8')"
           if ($LASTEXITCODE) { throw 'Real local OCR failed' }
       - name: Preserve failure diagnostics (no unverified wheel)
