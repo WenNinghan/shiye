@@ -10,6 +10,7 @@ parser.add_argument("--runtime", required=True)
 parser.add_argument("--cache", required=True)
 parser.add_argument("--output", required=True)
 parser.add_argument("--manifest", required=True)
+parser.add_argument("--version", default="0.3.0", help="Version used in the trusted pack ID")
 args = parser.parse_args()
 runtime, cache = Path(args.runtime).resolve(), Path(args.cache).resolve()
 output = Path(args.output).resolve()
@@ -33,7 +34,7 @@ with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compressleve
         archive.write(file, name)
 with output.open("rb") as stream:
     digest = hashlib.file_digest(stream, "sha256").hexdigest()
-manifest = {"version":1, "packs":[{"id":"formula-cpu-0.3.0","platform":"win32","arch":"x64",
+manifest = {"version":1, "packs":[{"id":"formula-cpu-" + args.version,"platform":"win32","arch":"x64",
     "file":output.name,"bytes":output.stat().st_size,"unpackedBytes":total,"sha256":digest}]}
 Path(args.manifest).write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(manifest))
