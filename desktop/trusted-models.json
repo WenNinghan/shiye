@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "formula-cpu-0.3.0",
+      "platform": "win32",
+      "arch": "x64",
+      "file": "Shiye-Formula-0.3.0-Windows-x64.shiye-model",
+      "bytes": 859620337,
+      "unpackedBytes": 1540114840,
+      "sha256": "18cc138522c0033bf7dd480695e21704f43aadf9457af65e62ad9ceb413bfcae"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "browser_downloads_verified": [
+    "docx",
+    "md",
+    "txt",
+    "pdf-image",
+    "pdf-searchable",
+    "json",
+    "ics"
+  ],
+  "word_editable_table_count": 1,
+  "word_rendered_pages": 1,
+  "searchable_pdf_pages": 1,
+  "searchable_pdf_matches_image_pdf_pixels": true,
+  "corrected_text_present_in_word_md_txt_json_pdf": true,
+  "scope": "Generated synthetic sample, not a real-world accuracy benchmark"
+}

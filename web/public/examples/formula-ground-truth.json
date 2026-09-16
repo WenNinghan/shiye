@@ -1,0 +1,7 @@
+{
+  "formulas": [
+    "\\int_{0}^{\\infty} e^{-x^2}\\,dx = \\frac{\\sqrt{\\pi}}{2}",
+    "\\nabla \\cdot \\mathbf{E}=\\frac{\\rho}{\\varepsilon_0}",
+    "A=\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix},\\quad A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}"
+  ]
+}

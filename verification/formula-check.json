@@ -1,0 +1,68 @@
+{
+  "verified_at": "2026-09-08T13:06:25.562789+00:00",
+  "runtime": {
+    "engine": "PaddleOCR PP-FormulaNet",
+    "model": "PP-FormulaNet_plus-M",
+    "device": "cpu",
+    "paddleocr_version": "3.7.0",
+    "paddlepaddle_version": "3.3.1",
+    "model_cached": true
+  },
+  "region_recognition": {
+    "latex": "\\int_{0}^{\\infty}e^{-x^2}dx=\\frac{\\sqrt{\\pi}}{2}",
+    "semantic_tokens_present": true,
+    "elapsed_ms": 13765
+  },
+  "full_page_scan": {
+    "detected": 3,
+    "elapsed_ms": 12875,
+    "items": [
+      {
+        "latex": "\\int_{0}^{\\infty}e^{-x^2}dx=\\frac{\\sqrt{\\pi}}{2}",
+        "bbox": [
+          427.2113037109375,
+          358.37371826171875,
+          669.294921875,
+          436.12628173828125
+        ],
+        "confidence": 0.9628727436065674
+      },
+      {
+        "latex": "\\nabla\\cdot\\mathsf{E}={\\frac{\\rho}{\\varepsilon_{0}}}",
+        "bbox": [
+          480.75482177734375,
+          619.78955078125,
+          612.0514526367188,
+          688.0135498046875
+        ],
+        "confidence": 0.9611914157867432
+      },
+      {
+        "latex": "A=[\\begin{matrix}{a}&{b}\\\\ {c}&{d}\\\\ \\end{matrix}],\\quad A^{-1}=\\frac{1}{a d-b c}[\\begin{matrix}{d}&{-b}\\\\ {-c}&{d}\\\\ \\end{matrix}]",
+        "bbox": [
+          353.541259765625,
+          910.8443603515625,
+          740.672607421875,
+          961.1558837890625
+        ],
+        "confidence": 0.9597453474998474
+      }
+    ],
+    "note": "Synthetic page; count is a regression check, not a general accuracy score."
+  },
+  "exports": {
+    "docx_native_omml_nodes": {
+      "oMath": 6,
+      "f": 2,
+      "rad": 2,
+      "sSubSup": 0,
+      "m": 6
+    },
+    "docx_formula_fallbacks": 0,
+    "markdown_math_delimiters": 2,
+    "warnings": [
+      "Word 使用清晰重排版；复杂版式、手写和无框线表格请人工核对。"
+    ]
+  },
+  "wall_elapsed_ms": 27250
+}

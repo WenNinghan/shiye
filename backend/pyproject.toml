@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shiye"
+version = "0.2.0"
+description = "识页 · 本地 OCR 与文档转换工作台"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "fastapi==0.141.1", "uvicorn==0.52.4", "python-multipart==0.0.32",
+  "pymupdf==1.28.2", "python-docx==1.2.0", "pillow==12.3.0",
+  "rapidocr-onnxruntime==1.4.4", "numpy==2.5.3", "opencv-python==5.0.0.93",
+  "onnxruntime==1.29.0", "latex2mathml==3.81.1", "mathml2omml==0.0.2"
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1", "httpx==0.28.1", "reportlab==5.0.1"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shiye*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
