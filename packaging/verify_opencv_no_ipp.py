@@ -47,11 +47,15 @@ def main():
         # Check the imported extension is the exact file from the candidate wheel.
         import cv2
         installed = Path(cv2.__file__).parent
+        extensions = 0
         for name in archive.namelist():
             if name.startswith('cv2/') and name.endswith('.pyd'):
+                extensions += 1
                 actual = installed/Path(name).relative_to('cv2')
                 if hashlib.sha256(actual.read_bytes()).digest() != hashlib.sha256(archive.read(name)).digest():
                     raise ValueError('Installed extension does not match candidate wheel')
+        if extensions == 0:
+            raise ValueError('No cv2 extension in candidate wheel')
     info = cv2.getBuildInformation()
     (root/'opencv-build-info.txt').write_text(info, encoding='utf-8')
     verify_build_info(info)
