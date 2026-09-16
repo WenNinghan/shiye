@@ -15,7 +15,7 @@
 | RapidOCR | 本地普通文字识别 | [项目与许可](https://github.com/RapidAI/RapidOCR) |
 | ONNX Runtime | 普通 OCR 推理运行时 | [官方项目](https://github.com/microsoft/onnxruntime) |
 | PaddleOCR / PaddlePaddle / PaddleX | 公式识别、公式区域定位与运行时 | [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)、[PaddlePaddle](https://github.com/PaddlePaddle/Paddle)、[PaddleX](https://github.com/PaddlePaddle/PaddleX) |
-| PP-FormulaNet_plus-M / PP-DocLayout_plus-L | 可选模型权重 | 由 PaddleOCR / PaddleX 官方下载流程取得；权重授权需按具体模型来源单独核对，不用框架许可证代替 |
+| PP-FormulaNet_plus-M / PP-DocLayout_plus-L | 可选模型权重 | 官方模型卡标注 Apache-2.0，两个权重与固定 revision 的 LFS SHA-256 一致；见[身份与来源记录](docs/distribution-materials/models.md)，不代表整个运行时审查完成 |
 | PyMuPDF / MuPDF | PDF 读取、渲染、搜索层及导出 | [官方 AGPL / 商业双许可说明](https://pymupdf.readthedocs.io/en/latest/about.html#license-and-copyright) |
 | python-docx、latex2mathml、mathml2omml | Word 文档与数学结构转换 | [python-docx](https://github.com/python-openxml/python-docx)、[latex2mathml](https://github.com/roniemartinez/latex2mathml)、[mathml2omml](https://pypi.org/project/mathml2omml/) |
 | React / Vite / FastAPI | 界面、构建与本机服务 | [React](https://github.com/facebook/react)、[Vite](https://github.com/vitejs/vite)、[FastAPI](https://github.com/fastapi/fastapi) |
@@ -23,6 +23,8 @@
 | Electron / electron-builder / PyInstaller | Windows 桌面与独立运行时构建 | [Electron](https://github.com/electron/electron)、[electron-builder](https://github.com/electron-userland/electron-builder)、[PyInstaller](https://github.com/pyinstaller/pyinstaller) |
 
 PyMuPDF 官方声明其与 MuPDF 采用 AGPL 与商业许可双授权。仅公开一部分源码不能自动证明所有组合分发义务已满足。因此当前不公开上传包含这些依赖的冻结安装包或模型离线包，也不承诺闭源部署、再分发或商业使用无条件可行。
+
+2026-09-16：作者已同意保留自有源码 MIT、履行组合程序适用 AGPL 条件的路线。实施时进一步发现现有 OpenCV wheel 静态链接 Intel IPP，许可限制带来新的兼容性风险。已完成的物料、113 份 Python sdist 下载记录和具体构建阻断见[分发核对记录](docs/distribution-licensing.md)；尚不能上传现有安装包。
 
 ## 本次公开内容
 

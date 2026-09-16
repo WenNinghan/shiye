@@ -21,6 +21,7 @@
 - 想了解桌面版 / 自己接 API：[桌面使用说明](docs/desktop-guide.md)。
 - 想参与：[贡献指南](CONTRIBUTING.md)；想了解实际效果：[测试与限制](docs/desktop-acceptance.md)。
 - 想了解许可与公开范围：[第三方来源与发布边界](THIRD_PARTY_NOTICES.md)。
+- 想了解安装包为什么还未提供：[分发核对进展与 OpenCV/IPP 构建阻断](docs/distribution-licensing.md)。自有源码 MIT 已确定，公开二进制仍需完成依赖处理。
 
 ## Windows 桌面测试版 v0.3
 

@@ -1,0 +1,900 @@
+{
+  "scope": "Distributions with files present in this PyInstaller Analysis",
+  "components": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "matched_files": 2,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/fastapi/annotated-doc",
+        "Documentation, https://github.com/fastapi/annotated-doc",
+        "Repository, https://github.com/fastapi/annotated-doc",
+        "Issues, https://github.com/fastapi/annotated-doc/issues",
+        "Changelog, https://github.com/fastapi/annotated-doc/release-notes.md"
+      ],
+      "pypi": "https://pypi.org/project/annotated-doc/0.0.5/",
+      "notices": [
+        {
+          "file": "annotated-doc-0.0.5/annotated_doc-0.0.5.dist-info/licenses/LICENSE",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "matched_files": 1,
+      "license": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/annotated-types/annotated-types",
+        "Source, https://github.com/annotated-types/annotated-types",
+        "Changelog, https://github.com/annotated-types/annotated-types/releases"
+      ],
+      "pypi": "https://pypi.org/project/annotated-types/0.8.0/",
+      "notices": [
+        {
+          "file": "annotated-types-0.8.0/annotated_types-0.8.0.dist-info/licenses/LICENSE",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "matched_files": 43,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Documentation, https://anyio.readthedocs.io/en/latest/",
+        "Changelog, https://anyio.readthedocs.io/en/stable/versionhistory.html",
+        "Source code, https://github.com/agronholm/anyio",
+        "Issue tracker, https://github.com/agronholm/anyio/issues"
+      ],
+      "pypi": "https://pypi.org/project/anyio/4.15.1/",
+      "notices": [
+        {
+          "file": "anyio-4.15.1/anyio-4.15.1.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "matched_files": 9,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Changelog, https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+        "Documentation, https://charset-normalizer.readthedocs.io/",
+        "Code, https://github.com/jawah/charset_normalizer",
+        "Issue tracker, https://github.com/jawah/charset_normalizer/issues"
+      ],
+      "pypi": "https://pypi.org/project/charset-normalizer/3.5.1/",
+      "notices": [
+        {
+          "file": "charset-normalizer-3.5.1/charset_normalizer-3.5.1.dist-info/licenses/LICENSE",
+          "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "matched_files": 22,
+      "license": "BSD-3-Clause",
+      "classifiers": [],
+      "project_urls": [
+        "Changes, https://click.palletsprojects.com/page/changes/",
+        "Chat, https://discord.gg/pallets",
+        "Documentation, https://click.palletsprojects.com/",
+        "Donate, https://palletsprojects.com/donate",
+        "Source, https://github.com/pallets/click/"
+      ],
+      "pypi": "https://pypi.org/project/click/8.5.0/",
+      "notices": [
+        {
+          "file": "click-8.5.0/click-8.5.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "matched_files": 6,
+      "license": "",
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/tartley/colorama"
+      ],
+      "pypi": "https://pypi.org/project/colorama/0.4.6/",
+      "notices": [
+        {
+          "file": "colorama-0.4.6/colorama-0.4.6.dist-info/licenses/LICENSE.txt",
+          "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "matched_files": 39,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/fastapi/fastapi",
+        "Documentation, https://fastapi.tiangolo.com/",
+        "Repository, https://github.com/fastapi/fastapi",
+        "Issues, https://github.com/fastapi/fastapi/issues",
+        "Changelog, https://fastapi.tiangolo.com/release-notes/"
+      ],
+      "pypi": "https://pypi.org/project/fastapi/0.141.1/",
+      "notices": [
+        {
+          "file": "fastapi-0.141.1/fastapi-0.141.1.dist-info/licenses/LICENSE",
+          "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "matched_files": 9,
+      "license": "Apache 2.0",
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "Documentation, https://google.github.io/flatbuffers/",
+        "Source, https://github.com/google/flatbuffers"
+      ],
+      "pypi": "https://pypi.org/project/flatbuffers/25.12.19/",
+      "notices": [],
+      "review": "MISSING-TEXT"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "matched_files": 11,
+      "license": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/h11/0.16.0/",
+      "notices": [
+        {
+          "file": "h11-0.16.0/h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "idna",
+      "version": "3.19",
+      "matched_files": 6,
+      "license": "BSD-3-Clause",
+      "classifiers": [],
+      "project_urls": [
+        "Changelog, https://github.com/kjd/idna/blob/master/HISTORY.md",
+        "Issue tracker, https://github.com/kjd/idna/issues",
+        "Source, https://github.com/kjd/idna"
+      ],
+      "pypi": "https://pypi.org/project/idna/3.19/",
+      "notices": [
+        {
+          "file": "idna-3.19/idna-3.19.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "latex2mathml",
+      "version": "3.81.1",
+      "matched_files": 15,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "repository, https://github.com/roniemartinez/latex2mathml",
+        "Donate, https://www.buymeacoffee.com/roniemartinez"
+      ],
+      "pypi": "https://pypi.org/project/latex2mathml/3.81.1/",
+      "notices": [],
+      "review": "MISSING-TEXT"
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.3",
+      "matched_files": 40,
+      "license": "BSD-3-Clause",
+      "classifiers": [],
+      "project_urls": [
+        "Source, https://github.com/lxml/lxml",
+        "Bug Tracker, https://bugs.launchpad.net/lxml"
+      ],
+      "pypi": "https://pypi.org/project/lxml/6.1.3/",
+      "notices": [
+        {
+          "file": "lxml-6.1.3/lxml-6.1.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "e7c3ce8d76331b0101cc46790ab43958ea90a364bcf962ed8763d5a818340e69"
+        },
+        {
+          "file": "lxml-6.1.3/lxml-6.1.3.dist-info/licenses/LICENSES.txt",
+          "sha256": "df682c668de65321677b5e4861dca4128a8bad8067f230956e9da3f985b3d398"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "mathml2omml",
+      "version": "0.0.2",
+      "matched_files": 9,
+      "license": "UNKNOWN",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/mathml2omml/0.0.2/",
+      "notices": [
+        {
+          "file": "mathml2omml-0.0.2/mathml2omml-0.0.2.dist-info/LICENSE",
+          "sha256": "4f72f201e132a8ba734f0d611f675ca6fcadbbacc4166cc32d2969c27c335eb9"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "matched_files": 177,
+      "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "classifiers": [],
+      "project_urls": [
+        "homepage, https://numpy.org",
+        "documentation, https://numpy.org/doc/",
+        "source, https://github.com/numpy/numpy",
+        "download, https://pypi.org/project/numpy/#files",
+        "tracker, https://github.com/numpy/numpy/issues",
+        "release notes, https://numpy.org/doc/stable/release"
+      ],
+      "pypi": "https://pypi.org/project/numpy/2.5.3/",
+      "notices": [
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "a804dff0ead9fadc5293456410bcbfc32bf024be9c4513459663fb7b442d2341"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+          "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+          "sha256": "aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+          "sha256": "d208152e2777ffd0126eacc1bd21c0320d69e4e6b622d21a2a12a47e8ef73763"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+          "sha256": "b0fd592d4ead563148e3977e7b589169d46a5ef2ff133c755a81af880a3fc919"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+          "sha256": "a732977853530066790c42817087f4829b518dd98d340c916acbfd227e39d3cb"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+          "sha256": "585483905b13d4b42f800c55ba99e89d6e2e33ccd5f503e201c07531d148ff41"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+          "sha256": "8db000e158c162e7249787852d8c69764706502ccee725c06641b31c1e95c8af"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+          "sha256": "19060ef465e1797d682ee0fc3081bd25ab1395e995e43d25c9d13c95d9a3cd6b"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/ma/LICENSE",
+          "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/LICENSE.md",
+          "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+          "sha256": "cf5619f25b112d5ce7c896efffc8e610bcb345dfadcc19f2c1460aa48fff2c9e"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+          "sha256": "92c10699884321f1c2947fe2a70ab23b0fbf1507f756d89dd08f38c61fc3d4fa"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+          "sha256": "41190663b77bee5302386495a07b7eabfbfa571aa0ae2f11da6764162062fc4f"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+          "sha256": "322ac46d870c8aeead6c53adcccc839296fb3c8e456eae155081297daf7f8013"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+          "sha256": "28cad82ce1379dc529df30da78ec012d7d0d1d576b03ddcb93388aee53659f59"
+        },
+        {
+          "file": "numpy-2.5.3/numpy-2.5.3.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+          "sha256": "454ec7350e478e037061850b67395753b425b1cb0a34bbc26290b020bf89d763"
+        },
+        {
+          "file": "numpy-2.5.3/numpy/_core/include/numpy/random/LICENSE.txt",
+          "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+        },
+        {
+          "file": "numpy-2.5.3/numpy/ma/LICENSE",
+          "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+        },
+        {
+          "file": "numpy-2.5.3/numpy/random/LICENSE.md",
+          "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.29.0",
+      "matched_files": 325,
+      "license": "MIT License",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/onnxruntime/1.29.0/",
+      "notices": [
+        {
+          "file": "onnxruntime-1.29.0/onnxruntime/LICENSE",
+          "sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674"
+        },
+        {
+          "file": "onnxruntime-1.29.0/onnxruntime/ThirdPartyNotices.txt",
+          "sha256": "4c5b864d8974c94b37461f38163facef79a1bb5dea461667ee9e5be6a8e73f83"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "opencv-python",
+      "version": "5.0.0.93",
+      "matched_files": 13,
+      "license": "Apache 2.0",
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/opencv-python/5.0.0.93/",
+      "notices": [
+        {
+          "file": "opencv-python-5.0.0.93/cv2/LICENSE-3RD-PARTY.txt",
+          "sha256": "c1d60169b55cee56452b227c2fd2a7b9ddda3dd3741065f1c6201072be73fadb"
+        },
+        {
+          "file": "opencv-python-5.0.0.93/cv2/LICENSE.txt",
+          "sha256": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107"
+        },
+        {
+          "file": "opencv-python-5.0.0.93/opencv_python-5.0.0.93.dist-info/LICENSE-3RD-PARTY.txt",
+          "sha256": "c1d60169b55cee56452b227c2fd2a7b9ddda3dd3741065f1c6201072be73fadb"
+        },
+        {
+          "file": "opencv-python-5.0.0.93/opencv_python-5.0.0.93.dist-info/LICENSE.txt",
+          "sha256": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "matched_files": 16,
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "classifiers": [],
+      "project_urls": [
+        "Documentation, https://packaging.pypa.io/",
+        "Source, https://github.com/pypa/packaging"
+      ],
+      "pypi": "https://pypi.org/project/packaging/26.3/",
+      "notices": [
+        {
+          "file": "packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "file": "packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "matched_files": 88,
+      "license": "MIT-CMU",
+      "classifiers": [],
+      "project_urls": [
+        "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+        "Changelog, https://github.com/python-pillow/Pillow/releases",
+        "Documentation, https://pillow.readthedocs.io",
+        "Funding, https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=pypi",
+        "Homepage, https://python-pillow.github.io",
+        "Mastodon, https://fosstodon.org/@pillow",
+        "Source, https://github.com/python-pillow/Pillow"
+      ],
+      "pypi": "https://pypi.org/project/pillow/12.3.0/",
+      "notices": [
+        {
+          "file": "pillow-12.3.0/pillow-12.3.0.dist-info/licenses/LICENSE",
+          "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "pyclipper",
+      "version": "1.4.0",
+      "matched_files": 3,
+      "license": "MIT",
+      "classifiers": [
+        "License :: OSI Approved",
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "pypi": "https://pypi.org/project/pyclipper/1.4.0/",
+      "notices": [
+        {
+          "file": "pyclipper-1.4.0/pyclipper-1.4.0.dist-info/licenses/LICENSE",
+          "sha256": "73c25539e7fb486b834c33747d579e0bc56c0f984294c88f3cb2329420ba300f"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "matched_files": 111,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/pydantic/pydantic",
+        "Documentation, https://docs.pydantic.dev",
+        "Funding, https://github.com/sponsors/samuelcolvin",
+        "Source, https://github.com/pydantic/pydantic",
+        "Changelog, https://docs.pydantic.dev/latest/changelog/"
+      ],
+      "pypi": "https://pypi.org/project/pydantic/2.13.5/",
+      "notices": [
+        {
+          "file": "pydantic-2.13.5/pydantic-2.13.5.dist-info/licenses/LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "matched_files": 3,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Funding, https://github.com/sponsors/samuelcolvin",
+        "Homepage, https://github.com/pydantic",
+        "Source, https://github.com/pydantic/pydantic/tree/main/pydantic-core"
+      ],
+      "pypi": "https://pypi.org/project/pydantic_core/2.46.5/",
+      "notices": [
+        {
+          "file": "pydantic_core-2.46.5/pydantic_core-2.46.5.dist-info/licenses/LICENSE",
+          "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.3",
+      "matched_files": 4,
+      "license": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)",
+      "classifiers": [
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)"
+      ],
+      "project_urls": [
+        "Homepage, https://pyinstaller.org",
+        "Documentation, https://pyinstaller.org",
+        "Source Code, https://github.com/pyinstaller/pyinstaller",
+        "Release Notes, https://pyinstaller.org/en/stable/CHANGES.html"
+      ],
+      "pypi": "https://pypi.org/project/pyinstaller/6.22.3/",
+      "notices": [
+        {
+          "file": "pyinstaller-6.22.3/pyinstaller-6.22.3.dist-info/licenses/COPYING.txt",
+          "sha256": "0598064c7d2718e38d7914a7d08343b2fa008e3bea9ebba2aa7a6ffa5900dd64"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "pymupdf",
+      "version": "1.28.2",
+      "matched_files": 16,
+      "license": "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License",
+      "classifiers": [],
+      "project_urls": [
+        "Documentation, https://pymupdf.readthedocs.io/",
+        "Source, https://github.com/pymupdf/pymupdf",
+        "Tracker, https://github.com/pymupdf/PyMuPDF/issues",
+        "Changelog, https://pymupdf.readthedocs.io/en/latest/changes.html"
+      ],
+      "pypi": "https://pypi.org/project/pymupdf/1.28.2/",
+      "notices": [
+        {
+          "file": "pymupdf-1.28.2/pymupdf-1.28.2.dist-info/COPYING",
+          "sha256": "40e60697600535eabfb5ae05f72829d88cfe8d02dd4792f5a754f6f51dabe55b"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "matched_files": 3,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Changelog, https://docs.pytest.org/en/stable/changelog.html",
+        "Contact, https://docs.pytest.org/en/stable/contact.html",
+        "Funding, https://docs.pytest.org/en/stable/sponsor.html",
+        "Homepage, https://docs.pytest.org/en/latest/",
+        "Source, https://github.com/pytest-dev/pytest",
+        "Tracker, https://github.com/pytest-dev/pytest/issues"
+      ],
+      "pypi": "https://pypi.org/project/pytest/9.1.1/",
+      "notices": [
+        {
+          "file": "pytest-9.1.1/pytest-9.1.1.dist-info/licenses/LICENSE",
+          "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "python-docx",
+      "version": "1.2.0",
+      "matched_files": 119,
+      "license": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Changelog, https://github.com/python-openxml/python-docx/blob/master/HISTORY.rst",
+        "Documentation, https://python-docx.readthedocs.org/en/latest/",
+        "Homepage, https://github.com/python-openxml/python-docx",
+        "Repository, https://github.com/python-openxml/python-docx"
+      ],
+      "pypi": "https://pypi.org/project/python-docx/1.2.0/",
+      "notices": [
+        {
+          "file": "python-docx-1.2.0/python_docx-1.2.0.dist-info/licenses/LICENSE",
+          "sha256": "7652f271e46d0d533e9dc463f3b5fcbdcacf4d6a9c8d6b554d15efd0f37f6132"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "matched_files": 6,
+      "license": "Apache-2.0",
+      "classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/Kludex/python-multipart",
+        "Documentation, https://kludex.github.io/python-multipart/",
+        "Changelog, https://github.com/Kludex/python-multipart/blob/master/CHANGELOG.md",
+        "Source, https://github.com/Kludex/python-multipart"
+      ],
+      "pypi": "https://pypi.org/project/python-multipart/0.0.32/",
+      "notices": [
+        {
+          "file": "python-multipart-0.0.32/python_multipart-0.0.32.dist-info/licenses/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "matched_files": 18,
+      "license": "MIT",
+      "classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Bug Tracker, https://github.com/yaml/pyyaml/issues",
+        "CI, https://github.com/yaml/pyyaml/actions",
+        "Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation",
+        "Mailing lists, http://lists.sourceforge.net/lists/listinfo/yaml-core",
+        "Source Code, https://github.com/yaml/pyyaml"
+      ],
+      "pypi": "https://pypi.org/project/PyYAML/6.0.3/",
+      "notices": [
+        {
+          "file": "PyYAML-6.0.3/pyyaml-6.0.3.dist-info/licenses/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "rapidocr-onnxruntime",
+      "version": "1.4.4",
+      "matched_files": 31,
+      "license": "Apache-2.0",
+      "classifiers": [],
+      "project_urls": [
+        "Documentation, https://rapidai.github.io/RapidOCRDocs",
+        "Changelog, https://github.com/RapidAI/RapidOCR/releases"
+      ],
+      "pypi": "https://pypi.org/project/rapidocr-onnxruntime/1.4.4/",
+      "notices": [],
+      "review": "MISSING-TEXT"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0",
+      "matched_files": 128,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Source, https://github.com/pypa/setuptools",
+        "Documentation, https://setuptools.pypa.io/",
+        "Changelog, https://setuptools.pypa.io/en/stable/history.html"
+      ],
+      "pypi": "https://pypi.org/project/setuptools/84.0.0/",
+      "notices": [
+        {
+          "file": "setuptools-84.0.0/setuptools-84.0.0.dist-info/licenses/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+          "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+          "sha256": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+          "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+          "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+          "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+          "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/config/NOTICE",
+          "sha256": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8"
+        },
+        {
+          "file": "setuptools-84.0.0/setuptools/config/_validate_pyproject/NOTICE",
+          "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "shapely",
+      "version": "2.1.2",
+      "matched_files": 39,
+      "license": "BSD 3-Clause",
+      "classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Documentation, https://shapely.readthedocs.io/",
+        "Repository, https://github.com/shapely/shapely"
+      ],
+      "pypi": "https://pypi.org/project/shapely/2.1.2/",
+      "notices": [
+        {
+          "file": "shapely-2.1.2/shapely-2.1.2.dist-info/licenses/LICENSE.txt",
+          "sha256": "e8cd7d34604d2758ff589f0f34d6ed79c3f7fb14aaf5e12fb09221421391a3bf"
+        },
+        {
+          "file": "shapely-2.1.2/shapely-2.1.2.dist-info/licenses/LICENSE_GEOS",
+          "sha256": "91a5bb11df4d44bfddc0c68db43681705326107781599fb6c6ff821042072d64"
+        },
+        {
+          "file": "shapely-2.1.2/shapely-2.1.2.dist-info/licenses/LICENSE_win32",
+          "sha256": "9b30cd1a09789884dd54e5828e31d2bf8e6879034e7cf7b6e0321444cf6dd11d"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "starlette",
+      "version": "1.6.0",
+      "matched_files": 23,
+      "license": "BSD-3-Clause",
+      "classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/Kludex/starlette",
+        "Documentation, https://starlette.dev/",
+        "Changelog, https://starlette.dev/release-notes/",
+        "Funding, https://github.com/sponsors/Kludex",
+        "Source, https://github.com/Kludex/starlette"
+      ],
+      "pypi": "https://pypi.org/project/starlette/1.6.0/",
+      "notices": [
+        {
+          "file": "starlette-1.6.0/starlette-1.6.0.dist-info/licenses/LICENSE.md",
+          "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.0",
+      "matched_files": 22,
+      "license": "MPL-2.0 AND MIT",
+      "classifiers": [],
+      "project_urls": [
+        "homepage, https://tqdm.github.io",
+        "repository, https://github.com/tqdm/tqdm",
+        "changelog, https://tqdm.github.io/releases",
+        "wiki, https://github.com/tqdm/tqdm/wiki"
+      ],
+      "pypi": "https://pypi.org/project/tqdm/4.70.0/",
+      "notices": [
+        {
+          "file": "tqdm-4.70.0/tqdm-4.70.0.dist-info/licenses/LICENCE",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "matched_files": 3,
+      "license": "MIT",
+      "classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/pydantic/typing-inspection",
+        "Documentation, https://pydantic.github.io/typing-inspection/dev/",
+        "Source, https://github.com/pydantic/typing-inspection",
+        "Changelog, https://github.com/pydantic/typing-inspection/blob/main/HISTORY.md"
+      ],
+      "pypi": "https://pypi.org/project/typing-inspection/0.4.4/",
+      "notices": [
+        {
+          "file": "typing-inspection-0.4.4/typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "matched_files": 1,
+      "license": "PSF-2.0",
+      "classifiers": [],
+      "project_urls": [
+        "Bug Tracker, https://github.com/python/typing_extensions/issues",
+        "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+        "Documentation, https://typing-extensions.readthedocs.io/",
+        "Home, https://github.com/python/typing_extensions",
+        "Q & A, https://github.com/python/typing/discussions",
+        "Repository, https://github.com/python/typing_extensions"
+      ],
+      "pypi": "https://pypi.org/project/typing_extensions/4.16.0/",
+      "notices": [
+        {
+          "file": "typing_extensions-4.16.0/typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "review": "text-present-review-required"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.4",
+      "matched_files": 42,
+      "license": "BSD-3-Clause",
+      "classifiers": [],
+      "project_urls": [
+        "Changelog, https://uvicorn.dev/release-notes",
+        "Funding, https://github.com/sponsors/encode",
+        "Homepage, https://uvicorn.dev/",
+        "Source, https://github.com/Kludex/uvicorn"
+      ],
+      "pypi": "https://pypi.org/project/uvicorn/0.52.4/",
+      "notices": [
+        {
+          "file": "uvicorn-0.52.4/uvicorn-0.52.4.dist-info/licenses/LICENSE.md",
+          "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371"
+        }
+      ],
+      "review": "text-present-review-required"
+    }
+  ],
+  "unmapped_site_package_files": []
+}
